@@ -1,0 +1,22 @@
+{
+  "_comment": "Documentation baseline, not a Bionic settings import and not guaranteed to fit every build.",
+  "target_model_family": "Qwen3.5-9B",
+  "model_id": "REPLACE_WITH_EXACT_INSTALLED_MODEL_ID",
+  "quantization": "Q4_K_M_IF_SUPPORTED",
+  "local_api_base_url": "http://127.0.0.1:1234/v1",
+  "experiment_baseline": {
+    "context_tokens": 4096,
+    "max_concurrent_generations": 1,
+    "temperature": 0.3,
+    "gpu_offload": "auto",
+    "flash_attention": "enable_if_supported"
+  },
+  "review_required": [
+    "actual_quantization",
+    "runtime_compatibility",
+    "available_VRAM",
+    "available_RAM",
+    "tool_call_support",
+    "observed_memory_usage"
+  ]
+}

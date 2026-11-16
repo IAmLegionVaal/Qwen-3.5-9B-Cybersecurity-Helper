@@ -1,0 +1,47 @@
+# Secret material: NEVER commit
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.p8
+*.key
+*.kdbx
+*.secret
+*.secrets
+*credentials*.json
+*token*.json
+*apikey*.json
+auth.json
+mcp.json
+mcp.local.json
+config/local/
+secrets/
+private/
+# Machine-specific or high-risk exports
+inventory/
+exports/
+backups/
+sessions/
+logs/
+*.log
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+# Build/test
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.venv/
+venv/
+node_modules/
+dist/
+build/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+{
+  "_comment": "DOCUMENTATION EXAMPLE ONLY: not necessarily directly importable into your Bionic version. No real tools or credentials are bundled.",
+  "mcpServers": {
+    "reviewed-example-server": {
+      "command": "node",
+      "args": [
+        "C:/REPLACE-WITH-REVIEWED-SERVER/server.mjs"
+      ],
+      "env": {
+        "EXAMPLE_TOKEN": "REPLACE_LOCALLY_VIA_SECRET_STORE"
+      }
+    }
+  }
+}

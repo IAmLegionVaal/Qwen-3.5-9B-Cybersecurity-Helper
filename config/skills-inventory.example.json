@@ -1,0 +1,11 @@
+{
+  "_comment": "Example schema; replace with a sanitized local Export-SkillInventory.ps1 result after review.",
+  "format_version": 1,
+  "skills": [
+    {
+      "name": "example-skill",
+      "manifest_bytes": 1024,
+      "sha256": "REPLACE_WITH_ACTUAL_SHA256_AFTER_LOCAL_REVIEW"
+    }
+  ]
+}
