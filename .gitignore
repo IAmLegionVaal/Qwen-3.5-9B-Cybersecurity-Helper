@@ -45,3 +45,10 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Temporary local skill review workspaces and raw imported content
+*PrivateReview*/
+PrivateReview/
+unreviewed-installed-skills/
+raw-installed-skills/
+*.review-export.zip
