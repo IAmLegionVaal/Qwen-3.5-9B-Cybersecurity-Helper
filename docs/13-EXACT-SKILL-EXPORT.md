@@ -29,11 +29,11 @@ Review the report for sensitive skill names before sharing.
 The **Export-ExactBionicSkills.ps1** script preserves file bytes and relative paths, produces SHA256 hashes and a review report, and refuses to follow symlinks or overwrite existing output. It DOES NOT upload anything, publish to GitHub, install dependencies, run a skill or create a distributable ZIP.
 
 ~~~powershell
-.\scripts\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$HOME\Documents\BionicSkills-PrivateReview" -WhatIf
-.\scripts\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$HOME\Documents\BionicSkills-PrivateReview"
+.\scripts\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$env:LOCALAPPDATA\BionicSkills-PrivateReview" -WhatIf
+.\scripts\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$env:LOCALAPPDATA\BionicSkills-PrivateReview"
 ~~~
 
-Keep the review folder PRIVATE, not in Git or a cloud-synced directory.
+Keep the review folder PRIVATE, not in Git or a cloud-synced directory. LOCALAPPDATA is a safer default than Documents, which may be redirected into OneDrive.
 
 ## Mandatory publication checklist
 

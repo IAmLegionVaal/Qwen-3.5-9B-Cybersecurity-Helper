@@ -14,7 +14,7 @@ Only run on a machine and skill directory you are authorized to inspect.
 Because original files may contain secrets or third-party code, do not upload
 the output until every file is reviewed for privacy, licensing and safety.
 .EXAMPLE
-.\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$HOME\Documents\BionicSkills-PrivateReview" -WhatIf
+.\Export-ExactBionicSkills.ps1 -SourceRoot "$HOME\.lmstudio\skills" -OutputDirectory "$env:LOCALAPPDATA\BionicSkills-PrivateReview" -WhatIf
 #>
 [CmdletBinding(SupportsShouldProcess = $true, ConfirmImpact = 'Medium')]
 param(
@@ -112,6 +112,9 @@ try {
     if ($destination.Equals($source, [StringComparison]::OrdinalIgnoreCase) -or
         $destination.StartsWith($source + '\', [StringComparison]::OrdinalIgnoreCase)) {
         throw 'Output must be outside the source skill directory.'
+    }
+    if ($destination -match '(?i)[\\/](OneDrive|Dropbox|Google Drive|iCloudDrive)[\\/]') {
+        throw 'Refusing output into a known cloud-sync folder; use a local non-synced private folder.'
     }
     if (Test-InsideGitWorktree -Path $destination) {
         throw 'Output is in a Git worktree. Choose a private non-Git folder.'
