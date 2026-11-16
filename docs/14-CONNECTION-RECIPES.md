@@ -136,3 +136,17 @@ Earlier setup discussions included PowerShell Expert, Microsoft Security skills,
 - Assuming a Gemini model response includes Google Search grounding.
 - Assigning blanket WordPress/GitHub administrator permissions to a local LLM.
 - Forgetting that a browser or remote model tool may transmit input outside the local device.
+
+
+## Offline MCP smoke test (recommended before cloud or website integrations)
+
+Use the [included echo server](../mcp-servers/echo/README.md) to verify the stdio handshake, tools/list and tools/call without any credentials. From the cloned repository run:
+
+~~~powershell
+node --check .\mcp-servers\echo\server.mjs
+node .\mcp-servers\echo\test.mjs
+~~~
+
+Create a Bionic local stdio MCP entry using **node** and an absolute path to the reviewed server.mjs. After discovery, ask the agent to call **echo** with a harmless dummy value. The expected result is exactly the submitted string. Do **not** submit tokens or client data to the demo.
+
+This verifies only basic MCP interoperability. Continue with a reviewed PowerShell, GitHub or WordPress server one at a time.

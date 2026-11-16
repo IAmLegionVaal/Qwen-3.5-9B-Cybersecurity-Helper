@@ -22,5 +22,14 @@ jobs:
       - name: Parse PowerShell scripts without executing them
         shell: pwsh
         run: ./tests/Assert-PowerShellSyntax.ps1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate demo MCP source
+        run: |
+          node --check mcp-servers/echo/server.mjs
+          node --check mcp-servers/echo/test.mjs
+      - name: Exercise demo MCP protocol
+        run: node mcp-servers/echo/test.mjs
       - name: Run unit tests
         run: python -m unittest discover -s tests -v

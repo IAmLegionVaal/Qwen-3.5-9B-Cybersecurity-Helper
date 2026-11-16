@@ -89,3 +89,15 @@ tests/             Standard-library unit tests
 - [Qwen3.5-9B model card](https://huggingface.co/Qwen/Qwen3.5-9B)
 
 Original repository content is licensed under [MIT](LICENSE). Third-party software and imported skills retain their own terms; no blanket redistribution permission is implied. Not endorsed by, sponsored by or affiliated with the named projects.
+
+
+## Offline MCP tool test: no account or API key required
+
+Before connecting GitHub, WordPress or Gemini, test a **network-free MCP echo server** included in [mcp-servers/echo](mcp-servers/echo/README.md). It has one short-string tool, **echo**, and no filesystem, shell, internet or credential permissions. It helps distinguish Bionic/MCP protocol problems from third-party authentication problems.
+
+~~~powershell
+node --check .\mcp-servers\echo\server.mjs
+node .\mcp-servers\echo\test.mjs
+~~~
+
+A successful test confirms the demo protocol responds correctly on the test machine, **not** that every external MCP server will work.
