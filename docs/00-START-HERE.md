@@ -113,3 +113,8 @@ GitHub's **Code → Download ZIP** gives users the public reference kit. The ori
 - [External skill review queue](09-third-party-skills.md)
 - [Restoration](08-rebuild-and-maintenance.md)
 - [Validation](10-validation.md)
+
+
+## Cybersecurity specialization
+
+Once the base model, agent prompt and offline MCP demo work reliably, choose from **32 downloadable SKILL.md workflows**. Begin with the [authorized security and pentest skill catalog](15-CYBERSECURITY-SKILL-PATHS.md). Select one skill per task before adding tools, and check Rules of Engagement before any active assessment. Hardware and performance limitations still apply.

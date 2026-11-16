@@ -1,6 +1,6 @@
 # 09. Third-party skills: research and review queue
 
-The following URLs are **references for optional human review**. Listing a project does NOT mean its current code has been installed, scanned completely, tested, endorsed or approved. Avoid directly running installer scripts from untrusted repositories.
+The following URLs are **references for optional human review**, except the four explicitly attributed Microsoft security SKILL.md files described below. Listing a project does NOT mean its current code has been installed, scanned completely, tested, endorsed or approved. Avoid directly running installer scripts from untrusted repositories.
 
 | Project | Focus | Review status |
 | --- | --- | --- |
@@ -42,3 +42,10 @@ Decision: APPROVE / REJECT / HOLD
 6. Document findings with evidence before import into Bionic.
 
 The original skills under skills/ are provided directly as text; they are independent of these references.
+
+
+## Four upstream Microsoft security skills included in this repository
+
+At the pinned revision `02e37e1977773e6897cc3d60710b6c766c233e90` of [vinayaklatthe/microsoft-security-skills](https://github.com/vinayaklatthe/microsoft-security-skills), the following **standalone SKILL.md text files** were inspected for common API-token patterns and obvious remote-code execution strings and then copied without changing their contents: `defender-for-endpoint`, `defender-xdr`, `entra-id-protection`, and `conditional-access-mfa`. Their upstream MIT license and commit/blob hashes are retained in [PROVENANCE](../third-party/microsoft-security-skills/PROVENANCE.md).
+
+That limited static inspection does **not** prove that an upstream skill, external references, or its eventual tool usage is safe. These skills contain guidance rather than an installed Microsoft Graph connector. Readers must obtain their own credentials/permissions, review tool behavior, and test safely.

@@ -17,7 +17,7 @@ Official reference: https://lmstudio.ai/docs/bionic/agent/skills
 
 The destination is a user-selected staging folder. It is NOT automatically Bionic's private skills directory. Import from this staging folder using Bionic, or configure visibility through the official UI. The script refuses to overwrite existing skill folders.
 
-## Included original skills
+## Included original and attributed third-party skills
 
 | Folder | When to use |
 | --- | --- |
@@ -49,4 +49,9 @@ The destination is a user-selected staging folder. It is NOT automatically Bioni
 - Harness: Bionic or another host that mediates access.
 - Internet access: requires a configured tool, approved web/browser access or provider feature; a model is not automatically browsing.
 
-See docs/09-third-party-skills.md for external projects intentionally **not** vendor-copied into this repo.
+There are now **32 skills**, including four attributed, verbatim MIT-licensed Microsoft security skills that were explicitly copied at a pinned revision. See [the cybersecurity skill-selection guide](15-CYBERSECURITY-SKILL-PATHS.md) and [third-party provenance](../third-party/microsoft-security-skills/PROVENANCE.md). Other external collections remain reference-only and are not installed automatically.
+
+
+## Pentest / cybersecurity expansion
+
+The first table above covers the original foundational skills; it is not exhaustive. The repository also includes 18 new specialized security workflows and 4 attributed third-party Microsoft skills. Use [the complete selection and authorization guide](15-CYBERSECURITY-SKILL-PATHS.md). Start with one skill at a time, especially on an 8 GB VRAM / 16 GB RAM model workstation.

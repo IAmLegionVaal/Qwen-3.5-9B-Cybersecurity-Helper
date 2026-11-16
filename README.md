@@ -6,21 +6,31 @@
 
 > **HARDWARE & SECURITY WARNING:** Performance and resource usage vary with RAM, VRAM, GPU driver, quantization, model context and concurrent tools. Incorrect setup, elevated shell access, untrusted skills or excessive tuning can lead to instability, overheating, data loss, unauthorized changes or security compromise. Normal supported LLM inference should operate within hardware protections, but do not bypass cooling, firmware, voltage or safety mechanisms. Back up your files, use a restricted workspace, monitor temperatures and review commands before execution. **Follow this guide at your own risk.** Read [reference hardware and risks](docs/11-REFERENCE-HARDWARE.md).
 
-> **EXACT SKILL STATUS:** The existing 10 skills in this repo are newly authored reference skills, **not** an export of the original workstation's complete installed skills. [Exact skill export and review](docs/13-EXACT-SKILL-EXPORT.md) explains how to publish the original supporting files and scripts lawfully and without exposing secrets. **Do not represent the current example skills as a verified identical installation.**
+> **EXACT SKILL STATUS:** The 28 original skills in this repo are public-safe reference skills, **not** an export of the original workstation's complete installed skills. [Exact skill export and review](docs/13-EXACT-SKILL-EXPORT.md) explains how to publish the original supporting files and scripts lawfully and without exposing secrets. **Do not represent the current example skills as a verified identical installation.**
 
 This community-maintained starter kit combines [Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B), [LM Studio Bionic](https://lmstudio.ai/docs/bionic), portable Agent Skills, practical PowerShell utilities and optional MCP integrations.
 
-> **Implementation status:** This repository contains original reference implementations, checked-in skills and configuration **templates**. It is not a verified export of an individual's installed workstation, and it does not claim external skills or MCP servers have been installed or audited. See [Validation](docs/10-validation.md).
+> **Implementation status:** This repository contains original reference implementations, checked-in skills and configuration **templates**. It is not a verified export of an individual's installed workstation, and it does not claim the original workstation's complete skills or external MCP servers have been installed or comprehensively audited. See [Validation](docs/10-validation.md).
 
 ## Features
 
 - Guided Windows 11 setup with a realistic 8 GB VRAM / 16 GB RAM starting point.
-- Ten original, portable Agent Skills: PowerShell, Windows, Active Directory, Microsoft 365, networking, incident response, malware triage, web application review, model reliability and MCP safety.
+- 32 downloadable Agent Skills: 28 original workflows (including 18 new cybersecurity and authorized pentest skills) and 4 pinned, MIT-licensed Microsoft security skills with upstream attribution.
 - Reusable agent instructions: accurate diagnostics, no fabricated results, controlled tool use, no answer loops.
 - Local OpenAI-compatible model API diagnostics and portable inventory export.
 - Optional cloud escalation pattern with explicit user consent and data classification.
 - Example MCP configuration, secret hygiene, CI secret scanning and skill validation.
-- Restore and troubleshooting guides with a curated third-party skills review queue.
+- Restore and troubleshooting guides with a curated third-party skills review queue, plus four explicitly attributed copies.
+
+## Cybersecurity and pentesting skills — 32 downloadable workflows
+
+[Browse the cybersecurity and authorized pentest skill catalog](docs/15-CYBERSECURITY-SKILL-PATHS.md) or [download the complete skills folder in a ZIP](https://github.com/IAmLegionVaal/Qwen-3.5-9B-Cybersecurity-Helper/archive/refs/heads/main.zip).
+
+There are **10 foundational original skills**, **18 additional original cybersecurity/pentesting skills**, and **4 verbatim upstream Microsoft security skills** with an immutable source revision, retained MIT license and [provenance](third-party/microsoft-security-skills/PROVENANCE.md).
+
+The assessment skills include scoping and Rules of Engagement, passive attack surface mapping, service testing, vulnerability validation, web/API assessments, AD/Entra and cloud security, KQL/Sigma detection, incident forensics, static malware analysis, phishing, supply-chain risk, purple-team exercises, LLM/MCP security and reporting. **All active testing requires authorization.**
+
+These instructions are not a guarantee of tool execution or a malware-free certificate. They do not install attack tools automatically. The original Bionic machine's exact skill export remains pending.
 
 ## Download / quick access
 
